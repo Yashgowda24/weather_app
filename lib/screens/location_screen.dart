@@ -71,6 +71,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     child: Icon(
                       Icons.near_me,
                       size: 50.0,
+                      color: Colors.white,
                     ),
                   ),
                   TextButton(
@@ -82,13 +83,15 @@ class _LocationScreenState extends State<LocationScreen> {
                         ),
                       );
                       if (typedName != null) {
-                        var weatherData = await weather.getCityWeather(typedName);
+                        var weatherData =
+                            await weather.getCityWeather(typedName);
                         updateUI(weatherData);
                       }
                     },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
+                      color: Colors.white,
                     ),
                   ),
                 ],
